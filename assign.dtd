@@ -1,0 +1,9 @@
+<!ELEMENT questions (questionTag+)>
+<!ELEMENT questionTag (question, options+)>
+<!ELEMENT question (#PCDATA)>
+<!ELEMENT options (#PCDATA)>
+<!ATTLIST questionTag
+          id ID #REQUIRED
+          isActive (true | false) "true"
+
+>

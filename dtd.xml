@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE studentGroup SYSTEM "student.dtd">
+
+<studentGroup>
+    <student id="a101" isActive="true">
+        <name>Jane Doe</name>
+        <name>Jane Doe</name>
+        <age>22</age>
+        <department>Computer Science &amp; Computer Engineering</department>
+    </student>
+    <student id="b102" isActive="false">
+        <name>Kolajo Williams</name>
+        <age>27</age>
+        <department>Statistics &amp; Computer Engineering</department>
+    </student>
+</studentGroup>

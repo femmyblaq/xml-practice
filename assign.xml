@@ -1,0 +1,37 @@
+<Questions>
+    <question>
+        <questionTag>What is the main cause of current climate change? </questionTag>
+        <option>A Natural cycle of the Earth</option>
+        <option>B Increased volcanic activity</option>
+        <option>C Human activities like burning fossil fuels</option>
+        <option>D Solar Flares</option>
+    </question>
+
+      <question>
+        <questionTag>Which organization is primarily responsible for coordinating
+            international public health efforts?
+        </questionTag>
+        <option>A UNICEF</option>
+        <option>B United Nations(UN)</option>
+        <option>C World Bank</option>
+        <option>D World Health Organization(WHO)</option>
+    </question>
+
+      <question>
+        <questionTag>Which of the following is a major concern about the rapid development
+            of artificial intelligence </questionTag>
+        <option>A Increased entertainment value</option>
+        <option>B Improved education</option>
+        <option>C Job displacement and ethical issues</option>
+        <option>D More social media apps</option>
+    </question>
+
+      <question>
+        <questionTag>Which region has the highest percentage of people
+             living in extreme poverty? </questionTag>
+        <option>A Europe</option>
+        <option>B North America</option>
+        <option>C Sub-Saharan Africa</option>
+        <option>D East Asia</option>
+    </question>
+</Questions>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<inventory>
+    <product>
+        <id>101</id>
+        <name>Wireless Headphones</name>
+        <price>95.99</price>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque.</description>
+        <category>Electronics</category>
+    </product>
+
+    <product>
+        <id>102</id>
+        <name>Smart Watch</name>
+        <price>150</price>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque.</description>
+        <category>Wearables</category>
+    </product>
+
+    <product>
+        <id>103</id>
+        <name>Iron</name>
+        <price>35.45</price>
+        <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque.</description>
+        <category>Electronic</category>
+    </product>
+</inventory> 

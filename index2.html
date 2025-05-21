@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Practice</title>
+</head>
+<style>
+    .curved-shape {
+        background-color: blueviolet;
+        height: 300px;
+        width: 600px;
+        clip-path: path("M 50 0 C 100 30, 100 30, 150 0 L 150 200 C 100 180, 100 180, 50 200 Z");
+    
+         /* path("M 10 0 C 100 30, 100 20, 190 0 L 200 200 C 100 180, 81 173, 0 200 Z")  */
+    }
+     ul li {
+        color: red;
+     }
+</style>
+
+<body>
+    <h2>XML Data Output</h2>
+    <h3>Note</h3>
+    <ul id="list"></ul>
+
+    <h3>Molecule</h3>
+    <ul id="display"></ul>
+    <div class="curved-shape"></div>
+</body>
+<script>
+    //Parse the XML string
+    let output = document.querySelector("#list");
+    let display = document.querySelector("#display");
+    console.log("Hello xmlDocs")
+    fetch("data2.xml")
+        .then(res => res.text())
+        .then(data => {
+            // console.log(data)
+            let parser = new DOMParser();
+            let xmlDocs = parser.parseFromString(data, "text/xml");
+
+            let noteNs = "http://example.com/note"
+            let chemNs = "http://example.com/chem"
+
+            for (let i = 0; i < 2; i++) {
+                const note = xmlDocs.getElementsByTagNameNS(noteNs, "to")[i]
+                const messageBody = xmlDocs.getElementsByTagNameNS(noteNs, "body")[i]
+                console.log(note)
+                let to = note.textContent
+                let body = messageBody.textContent
+                console.log(to)
+                const li = document.createElement("li");
+                const bodyli = document.createElement("li");
+                li.textContent = to
+                bodyli.textContent = body
+                output.appendChild(li)
+                output.appendChild(bodyli)
+
+                const atomElement = xmlDocs.getElementsByTagNameNS(chemNs, "atom")[i];
+
+                let id = atomElement.getAttribute("id");
+                let elementType = atomElement.getAttribute("elementType");
+                const liId = document.createElement("li");
+                const liEt = document.createElement("li");
+                liId.textContent = id
+                liEt.textContent = elementType
+                display.appendChild(liId)
+                display.appendChild(liEt)
+                console.log(id)
+                console.log(elementType)
+            }
+        });
+</script>
+
+</html>

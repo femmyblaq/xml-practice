@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root xmlns:note="http://example.com/note" xmlns:chem="http://example.com/chem">
+    <note:note>
+        <note:id>101</note:id>
+        <note:to>Ali</note:to>
+        <note:date>05-10-2025</note:date>
+        <note:body>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque.</note:body>
+    </note:note>
+    <note:note>
+        <note:id>102</note:id>
+        <note:to>Somto</note:to>
+        <note:date>19-05-2025</note:date>
+        <note:body>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, neque.</note:body>
+    </note:note>
+    <chem:molecule>
+        <chem:atom id="a1" elementType="C"></chem:atom>
+        <chem:atom id="a2" elementType="O"></chem:atom>
+    </chem:molecule>
+</root> 

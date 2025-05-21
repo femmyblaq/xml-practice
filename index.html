@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Practice</title>
+</head>
+<style>
+    .curved-shape {
+        background-color: blueviolet;
+        height: 300px;
+        width: 100%;
+        clip-path: path("M 0 0 C 136 27, 566 108, 1114 0 L 1114 249 C 613 200, 581 201, 0 271 Z");
+        display: flex;
+        gap: 10px;
+        
+        /* path("M 0 0 C 136 34, 307 108, 1114 0 L 1114 249 C 613 200, 581 180, 0 271 Z") 
+
+        path("M 0 0 C 136 27, 566 108, 1114 0 L 1114 249 C 613 200, 581 201, 0 271 Z") */
+        
+    }
+
+    /* .curved-shape {
+        background-color: blueviolet;
+        height: 300px;
+        width: 100%;
+        clip-path: path("M 0 0  C 25% 20%, 75% 20%, 100% 0 L 100% 100% C 75% 80%, 25% 80%, 0 100% Z");
+    } */
+
+    /* .curved-shape {
+        background-color: blueviolet;
+        height: 300px;
+        width: 100%;
+        border-radius: 50% / 0 0 20% 20%;
+    } */
+
+    /* Latest one  */
+    /* path("M 0 0 C 136 34, 307 108, 1114 0 L 1114 249 C 613 200, 581 180, 0 271 Z") */
+
+
+    /* path("M 50 0 C 100 30, 100 30, 150 0 L 150 200 C 100 180, 100 180, 50 200 Z"); */
+    .cont {
+        border: 2px solid red;
+    }
+    .curved-shape img {
+        width: 300px;
+    }
+</style>
+
+<body>
+    <h2>XML Data Output</h2>
+    <h3>Note</h3>
+    <ul id="list"></ul>
+
+
+    <div class="cont">
+        <div class="curved-shape">
+            <img src="pics.jpg" alt="">
+            <img src="pics2.jpg" alt="">
+            <img src="pics.jpg" alt="">
+            <img src="pics2.jpg" alt="">
+            <img src="pics.jpg" alt="">
+            <img src="pics2.jpg" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    //Parse the XML string
+    let output = document.querySelector("#list");
+    console.log("Hello xmlDocs")
+
+    //Get all product element
+    //let products = xmlDocs.getElementsByTagName("product")
+
+    fetch("data2.xml")
+        .then(res => res.text())
+        .then(data => {
+            // console.log(data)
+            let parser = new DOMParser();
+            let xmlDocs = parser.parseFromString(data, "text/xml");
+
+            let noteNs = "http://example.com/note"
+            let chemNs = "http://example.com/chem"
+
+            const note = xmlDocs.getElementsByTagNameNS(noteNs, "to")[0]
+            console.log(note)
+            // for(var i =0; i<note.length; i++) {
+            // console.log("Loop", note[i].textContent)
+
+            //  id =  note[i].getElementsByTagName("id")[0].textContent
+            to = note.textContent
+            console.log(to)
+            const li = document.createElement("li");
+            // const li2 = document.createElement("li");
+            // li.textContent = id
+            li.textContent = to
+            output.appendChild(li)
+            // output.appendChild(li2)
+            // }
+        });
+
+
+    //Display notes
+    //console.log(products)
+    //document.write(products)
+</script>
+
+</html>

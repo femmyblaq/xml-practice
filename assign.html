@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions and Answers</title>
+</head>
+
+<body>
+    <h2>Questions and Answers</h2>
+    <div class="container">
+
+    </div>
+
+    <script>
+        let container = document.querySelector(".container")
+        fetch("assign.xml")
+            .then(res=> res.text())
+            .then(data => {
+                // console.log(data)
+                let parser = new DOMParser();
+                let xmlDocs = parser.parseFromString(data, "text/xml");
+
+                const questions = xmlDocs.getElementsByTagName("question")
+                // const options = xmlDocs.getElementsByTagName("option")
+                // console.log(questions)
+                // console.log(options.length)
+                for(var i=0; i<questions.length; i++) {
+                    const question = xmlDocs.getElementsByTagName("question")[i]
+                    const qstTag = question.getElementsByTagName("questionTag")[0].textContent
+                    
+                    container.innerHTML += `<h2>${qstTag }</h2>`
+                    for(var j=0; j< 4; j++){
+                        const qstOptions = question.getElementsByTagName("option")[j].textContent
+                        container.innerHTML += `<li>${qstOptions }</li>`
+                        // console.log(qstOptions)
+                    }
+                    console.log(qstTag)
+                    console.log(question)
+                }
+            })
+    </script>
+</body>
+
+</html>
