@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<library xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="schema.xsd">
+    <book>
+        <title>Effective Java</title>
+        <author>Joshua Bloch</author>
+        <publisher>XYZ publisher</publisher>
+        <isbn>111234555</isbn>
+        <price>120.50</price>
+        <date>2000-08-22</date>
+    </book>
+    <book>
+        <title>Python for Beginner</title>
+        <author>Bloch</author>
+        <publisher>ABC publisher</publisher>
+        <isbn>111234555</isbn>
+        <price>120.50</price>
+        <date>2000-08-22</date>
+    </book>
+</library>
