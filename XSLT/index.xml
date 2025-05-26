@@ -1,0 +1,36 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+
+<breakfast_menu>
+    <food>
+        <name>Jollof Rice</name>
+        <price>$13.95</price>
+        <description>
+            A very Delicious and well cooked meal usually made by the Africans..  
+        </description>
+        <calories>250</calories>
+    </food>
+    <food>
+        <name>Burger</name>
+        <price>$2.55</price>
+        <description>
+            Sweet and yummy with beef plasted in it..  
+        </description>
+        <calories>850</calories>
+    </food>
+    <food>
+        <name>Pasta</name>
+        <price>$8.25</price>
+        <description>
+            Sweet and yummy with beef plasted in it..  
+        </description>
+        <calories>850</calories>
+    </food>
+    <food>
+        <name>French Toast</name>
+        <price>$7.55</price>
+        <description>
+            Amazing meal you will love to eat..  
+        </description>
+        <calories>550</calories>
+    </food>
+</breakfast_menu>
